@@ -1,5 +1,7 @@
 <h1>All Photos</h1>
 
+<a href ="/photos/new">Add a new Photo</a>
+
 <% @photo_list.each do |pic| %>
 
 <li>
@@ -8,5 +10,21 @@
     <p>
         <%= pic.caption %>
     </p>
+   
+   <p>
+       <a href ="/photos/<%= pic.id %> ">Show Details</a>
+      
+   </p>
+   
+   <p>
+       <a href ="/photos/<%= pic.id %>/edit ">Edit Photo</a>
+      
+   </p>
+   
+   
+    <p>
+       
+       <a href="/photos/delete_photo/<%= pic.id %>">Delete</a>
+   </p>
 </li>
 <% end %>
